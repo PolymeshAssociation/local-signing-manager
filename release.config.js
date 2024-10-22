@@ -1,9 +1,13 @@
 module.exports = {
-  repositoryUrl: 'https://github.com/PolymeshAssociation/typescript-boilerplate.git',
+  repositoryUrl: 'https://github.com/PolymeshAssociation/local-signing-manager',
   branches: [
     'master',
     {
       name: 'beta',
+      prerelease: true,
+    },
+    {
+      name: 'alpha',
       prerelease: true,
     },
   ],
