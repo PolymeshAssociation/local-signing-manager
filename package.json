@@ -45,7 +45,7 @@
     "prettier": "2.8.7",
     "prettier-eslint": "15.0.1",
     "prettier-eslint-cli": "7.1.0",
-    "semantic-release": "21.0.0",
+    "semantic-release": "^25.0.3",
     "ts-jest": "^29.1.0",
     "ttypescript": "1.5.15",
     "typedoc": "0.23.18",
@@ -63,6 +63,7 @@
     "@polkadot/api": "16.5.2",
     "@polkadot/util": "13.5.8",
     "@polkadot/util-crypto": "13.5.8",
-    "@polymeshassociation/signing-manager-types": "3.5.0"
-  }
+    "@polymeshassociation/signing-manager-types": "3.6.0"
+  },
+  "packageManager": "yarn@4.14.1"
 }
