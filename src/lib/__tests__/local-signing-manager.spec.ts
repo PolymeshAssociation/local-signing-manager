@@ -241,30 +241,15 @@ describe('class KeyringSigner', () => {
         genesisHash: '0x44748824f9798715435c421b5db9af2beae537974d192fab5fb6fc12e1523765',
         method: '0x1a005041594c4f41445f54455354',
         nonce: '0x00000001',
-        signedExtensions: [
-          'CheckSpecVersion',
-          'CheckTxVersion',
-          'CheckGenesis',
-          'CheckMortality',
-          'CheckNonce',
-          'CheckWeight',
-          'ChargeTransactionPayment',
-        ],
+        signedExtensions,
         tip: '0x00000000000000000000000000000000',
         version: 4,
       };
-      /*
-       * I had to go to hell and back to get this value, but trust me, it's a raw version of the above payload.
-       * In order to re-generate both, you must:
-       *   - create a script that uses the Polymesh SDK with a signing manager to reserve a ticker (or any other simple extrinsic)
-       *   - open `node_modules/@polkadot/api/submittable/createClass.js` (it might be createClass.cjs. Do both to be sure)
-       *   - go to the definition of `_signViaSigner`, log both `payload.toJson()` and `payload.toRaw()`
-       *   - run the script and pick the values from the terminal
-       * Since sr25519 signatures are non-deterministic, the only way to verify that stuff is signed properly is via `signatureVerify`,
-       * Which only handles raw data
-       */
-      const rawPayload =
-        '0x1a005041594c4f41445f5445535405000400b90b00000200000044748824f9798715435c421b5db9af2beae537974d192fab5fb6fc12e1523765df06dca982acacbd5f0bcd7a8a062465b8441d569813561ed13ab81883bc08e7';
+      const rawPayload = u8aToHex(
+        registry.createType('ExtrinsicPayload', payload, { version: payload.version }).toU8a({
+          method: true,
+        })
+      );
 
       let result = await signer.signPayload(payload);
 
