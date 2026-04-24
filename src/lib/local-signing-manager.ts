@@ -11,6 +11,7 @@ import { cryptoWaitReady, mnemonicGenerate } from '@polkadot/util-crypto';
 import {
   PolkadotSigner,
   signedExtensions,
+  signedExtensionTypes,
   SigningManager,
 } from '@polymeshassociation/signing-manager-types';
 
@@ -132,7 +133,7 @@ export class LocalSigningManager implements SigningManager {
     });
 
     const registry = new TypeRegistry();
-    registry.setSignedExtensions(signedExtensions);
+    registry.setSignedExtensions(signedExtensions, signedExtensionTypes);
 
     this.externalSigner = new KeyringSigner(this.keyring, registry);
 

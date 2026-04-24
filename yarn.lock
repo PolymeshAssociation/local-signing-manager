@@ -2041,7 +2041,7 @@ __metadata:
     "@polkadot/dev-ts": "npm:0.83.3"
     "@polkadot/util": "npm:13.5.9"
     "@polkadot/util-crypto": "npm:13.5.9"
-    "@polymeshassociation/signing-manager-types": "npm:3.6.0"
+    "@polymeshassociation/signing-manager-types": "npm:3.7.1"
     "@semantic-release/changelog": "npm:^6.0.3"
     "@types/jest": "npm:27.4.0"
     "@types/jest-when": "npm:^3.5.5"
@@ -2076,12 +2076,12 @@ __metadata:
   languageName: unknown
   linkType: soft
 
-"@polymeshassociation/signing-manager-types@npm:3.6.0":
-  version: 3.6.0
-  resolution: "@polymeshassociation/signing-manager-types@npm:3.6.0"
+"@polymeshassociation/signing-manager-types@npm:3.7.1":
+  version: 3.7.1
+  resolution: "@polymeshassociation/signing-manager-types@npm:3.7.1"
   dependencies:
     "@polkadot/api": "npm:16.5.2"
-  checksum: 10c0/45487f83ec67aee8d7badeea0560d63689fdebbce789a2b03a6fd0d35a94248e9b51a3022861f53191cf24bfcbfeceec3facd01996c28fa492be5b038ceb6312
+  checksum: 10c0/a6e29495be2547852be80923c1aabffe5ec545a3acb6d85333f3577625ceb836a818ae8cd735a1dc89504b60e98a87f05e39bb66ff6d77bdeea57542a7a255f2
   languageName: node
   linkType: hard
 
