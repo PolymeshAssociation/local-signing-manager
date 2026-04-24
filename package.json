@@ -65,5 +65,9 @@
     "@polkadot/util-crypto": "13.5.9",
     "@polymeshassociation/signing-manager-types": "3.7.1"
   },
-  "packageManager": "yarn@4.14.1"
+  "packageManager": "yarn@4.14.1",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/PolymeshAssociation/local-signing-manager.git"
+  }
 }
